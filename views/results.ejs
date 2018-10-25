@@ -1,0 +1,13 @@
+<h1>Results from IMDB.com</h1>
+<h3>Showing results from searching "<%= search_text %>"</h3>
+
+<% if(search_results.length == 0){ %>
+	<p>No results were found.</p>
+<% } %>
+
+<% for(var i=0; i < search_results.length; i++) { %>
+	<h4><%= search_results[i][0] %></h4>
+<%	for(var j=1; j < search_results[i].length; j++){ %>
+		<p><%= search_results[i][j] %></p>
+<%	}
+} %>
